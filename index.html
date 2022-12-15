@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ptPT">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap início -->
+		<link rel="stylesheet" href="bootstrap-css/bootstrap.css">	
+		<!--Font Awesome-->
+		<script src="https://kit.fontawesome.com/32b480a440.js" crossorigin="anonymous"></script>
+
+		<script src="app.js"></script>
+		<title>Orçamento Pessoal</title>
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-5">
+			<div class="container">
+				<a class="navbar-brand" href="#">
+					<img src="logo.png" width="50" height="35" alt="Orçamento pessoal">
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="index.html">Cadastro</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="consulta.html">Consulta</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col mb-5">
+          <h1 class="display-4">Registo de nova despesa</h1>
+        </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-2">
+          <select class="form-control" id="ano">
+            <option value="">Ano</option>
+            <option value="2022">2022</option>
+          </select>
+        </div>
+
+        <div class="col-md-2">
+          <select class="form-control" id="mes">
+            <option value="">Mês</option>
+            <option value="1">Janeiro</option>
+            <option value="2">Fevereiro</option>
+            <option value="3">Março</option>
+            <option value="4">Abril</option>
+            <option value="5">Maio</option>
+            <option value="6">Junho</option>
+            <option value="7">Julho</option>
+            <option value="8">Agosto</option>
+            <option value="9">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+          </select>
+        </div>
+        
+        <div class="col-md-2">
+          <input type="text" class="form-control" placeholder="Dia" id="dia" />
+        </div>
+
+        <div class="col-md-6">
+          <select class="form-control" id="tipo">
+            <option value="">Tipo</option>
+            <option value="1">Alimentação</option>
+            <option value="2">Educação</option>
+            <option value="3">Lazer</option>
+            <option value="4">Saúde</option>
+            <option value="5">Transporte</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <input type="text" class="form-control" placeholder="Descrição" id="descricao" />
+        </div>
+
+        <div class="col-md-2">
+          <input type="text" class="form-control" placeholder="Valor" id="valor" />
+        </div>
+
+        <div class="col-md-2 d-flex justify-content-end">
+          <button type="button" class="btn btn-primary" onclick="registarDespesa()">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+	
+	
+	<!-- Modal -->
+	<div class="modal fade" id="modalGravacao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 id="headerModal" class="modal-title fs-5" id="exampleModalLabel">Erro</h1>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div id="mensagemModal" class="modal-body">
+					<!--mensagem escrita-->
+				</div>
+				<div class="modal-footer">
+					<button id="buttonModal" type="button" data-dismiss="modal">Voltar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+  
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  </body>
+
+</html>
